@@ -4,8 +4,8 @@ dns.setServers(["1.1.1.1", "8.8.8.8"]);
 const mongoose = require("mongoose");
 const bcrypt   = require("bcryptjs");
 const dotenv   = require("dotenv");
-
-dotenv.config({ path: "../../.env" });
+const path = require("path");
+dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
 const User = require("../models/User");
 
